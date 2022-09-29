@@ -1,5 +1,2 @@
-const sayHello = (name: string) => {
-  return `Hello,${name}`;
-};
-
-console.log(sayHello("blueberryBook"));
+import { sentence } from "./02_Basic/文と式";
+console.log(sentence());
