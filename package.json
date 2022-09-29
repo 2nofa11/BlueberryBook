@@ -1,0 +1,25 @@
+{
+  "name": "blueberrybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2nofa11/BlueberryBook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2nofa11/BlueberryBook/issues"
+  },
+  "homepage": "https://github.com/2nofa11/BlueberryBook#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
