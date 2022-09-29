@@ -11,3 +11,9 @@ export const sentence2 = () => {
   const target = greeting;
   return greeting + target;
 };
+
+export const sentence3 = () => {
+  const greeting = "Hello, ";
+  const target = greeting + "World!";
+  return target;
+};
