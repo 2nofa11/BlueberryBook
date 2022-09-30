@@ -12,3 +12,11 @@ export const sentence2 = () => {
     text = greeting + target;
   return text;
 };
+
+// 識別子
+
+export const sentence3 = () => {
+  const あいう = 123;
+  const 技術評論社 = あいう + 876;
+  return 技術評論社;
+};
