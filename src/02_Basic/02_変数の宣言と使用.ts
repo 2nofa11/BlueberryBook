@@ -20,3 +20,11 @@ export const sentence3 = () => {
   const 技術評論社 = あいう + 876;
   return 技術評論社;
 };
+
+// 型注釈
+
+export const sentence4 = () => {
+  const greeting: string = "Hi, ";
+  const target: string = "world";
+  return greeting + target;
+};
