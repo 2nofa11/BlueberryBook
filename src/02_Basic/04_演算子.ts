@@ -19,3 +19,16 @@ export const increment_decrement = () => {
   --foo;
   console.log(foo--);
 };
+
+// 比較演算子と等価演算子
+
+//大小比較の例
+export const comparisonOperator = () => {
+  const left1 = -5;
+  const right1 = 0;
+  console.log(left1 > right1);
+
+  const left2 = 100n;
+  const right2 = 50n;
+  console.log(left2 >= right2);
+};
