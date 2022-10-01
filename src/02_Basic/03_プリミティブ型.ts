@@ -16,3 +16,10 @@ export const sentence1 = () => {
   const area = ((width1 + width2) * height) / 2;
   return area;
 };
+
+// 数値リテラル
+export const sentence2 = () => {
+  const million = 1_000_000;
+  const small = 4e-5;
+  return { million, small };
+};
