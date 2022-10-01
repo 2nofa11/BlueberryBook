@@ -49,3 +49,18 @@ export const sentence6 = () => {
   const u: undefined = undefined;
   return { n, u };
 };
+
+// 暗黙の型変換
+import { createInterface } from "readline";
+
+const rl = createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+export const sentence7 = () => {
+  rl.question("文字列を入力してください", (line) => {
+    console.log(`${line}が入力されました`);
+    rl.close;
+  });
+};
