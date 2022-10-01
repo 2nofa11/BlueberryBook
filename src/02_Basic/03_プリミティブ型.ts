@@ -29,3 +29,10 @@ export const sentence3 = () => {
   const bigNum: bigint = (123n + 456n) * 2n;
   return bigNum;
 };
+
+// 文字列型
+export const sentence4 = () => {
+  const str1: string = "Hello";
+  const str2: string = "world";
+  return `${str1},${str2}`;
+};
