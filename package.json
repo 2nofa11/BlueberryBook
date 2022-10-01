@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/2nofa11/BlueberryBook#readme",
   "devDependencies": {
+    "@types/node": "^18.7.23",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
   }
 }
