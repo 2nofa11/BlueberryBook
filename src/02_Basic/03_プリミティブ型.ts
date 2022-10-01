@@ -23,3 +23,9 @@ export const sentence2 = () => {
   const small = 4e-5;
   return { million, small };
 };
+
+// 任意制度整数
+export const sentence3 = () => {
+  const bigNum: bigint = (123n + 456n) * 2n;
+  return bigNum;
+};
