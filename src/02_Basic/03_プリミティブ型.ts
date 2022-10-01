@@ -41,3 +41,11 @@ export const sentence4 = () => {
 export const sentence5 = () => {
   return "Hello\n\u{796d}";
 };
+
+// nullとundefinedの違い
+export const sentence6 = () => {
+  const n: null = null;
+  // 筆者はundefined派
+  const u: undefined = undefined;
+  return { n, u };
+};
