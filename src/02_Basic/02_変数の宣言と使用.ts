@@ -31,7 +31,17 @@ export const sentence4 = () => {
 
 // letによる変数宣言と変数への再代入
 export const sentence5 = () => {
+  // constだと「定数であるため、'greeting' に代入することはできません」
   let greeting = "Hello, ";
   greeting = greeting + "World!";
   return greeting;
+};
+
+// 変数に型注釈を与えた場合のコンパイルエラー
+export const sentence6 = () => {
+  let greeting: string, target: string;
+  greeting = "Hello, ";
+  target = "world";
+  // 割り当てられる前に使用されるとエラー
+  return greeting + target;
 };
