@@ -61,8 +61,8 @@ const rl = createInterface({
 export const sentence7 = () => {
   rl.question("数値を入力してください", (line) => {
     // 型推論の確認
-    const result = line + 1000; // 暗黙の変換が行われている
+    const result = Number(line) + 1000; // 明示的な変換！
     console.log(`${result}が入力されました`);
-    rl.close;
+    rl.close();
   });
 };
