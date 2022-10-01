@@ -11,3 +11,11 @@ export const unaryOperator2 = () => {
   const str: string = "123";
   console.log(+str + 100);
 };
+
+export const increment_decrement = () => {
+  let foo = 10;
+  foo++;
+  console.log(foo++);
+  --foo;
+  console.log(foo--);
+};

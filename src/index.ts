@@ -1,3 +1,3 @@
-import { unaryOperator2 } from "./02_Basic/04_演算子";
+import { increment_decrement } from "./02_Basic/04_演算子";
 
-unaryOperator2();
+increment_decrement();
