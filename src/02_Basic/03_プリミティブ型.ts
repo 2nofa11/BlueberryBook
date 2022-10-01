@@ -36,3 +36,8 @@ export const sentence4 = () => {
   const str2: string = "world";
   return `${str1},${str2}`;
 };
+
+//文字列の中のescapeシーケンス
+export const sentence5 = () => {
+  return "Hello\n\u{796d}";
+};
