@@ -1,3 +1,3 @@
-import { sentence8 } from "./02_Basic/03_プリミティブ型";
+import { unaryOperator1 } from "./02_Basic/04_演算子";
 
-sentence8();
+unaryOperator1();
