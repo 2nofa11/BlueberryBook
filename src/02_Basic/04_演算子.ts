@@ -60,3 +60,11 @@ export const logicalOperator = () => {
     rl.close();
   });
 };
+
+export const shortCircuitRating1 = () => {
+  const input1 = "123";
+  const input2 = "";
+
+  console.log(!!input1);
+  console.log(!!input2);
+};
