@@ -28,3 +28,10 @@ export const sentence4 = () => {
   const target: string = "world";
   return greeting + target;
 };
+
+// letによる変数宣言と変数への再代入
+export const sentence5 = () => {
+  let greeting = "Hello, ";
+  greeting = greeting + "World!";
+  return greeting;
+};
