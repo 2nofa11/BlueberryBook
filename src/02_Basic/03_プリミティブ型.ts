@@ -66,3 +66,8 @@ export const sentence7 = () => {
     rl.close();
   });
 };
+
+export const sentence8 = () => {
+  const bigint = BigInt("foo");
+  console.log(bigint);
+};
