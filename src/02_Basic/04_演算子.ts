@@ -68,3 +68,11 @@ export const shortCircuitRating1 = () => {
   console.log(!!input1);
   console.log(!!input2);
 };
+
+export const shortCircuitRating2 = () => {
+  rl.question("名前を入力してください", (name) => {
+    const displayName = name || "名無し";
+    console.log(`こんにちわ、${displayName}さん`);
+    rl.close();
+  });
+};
