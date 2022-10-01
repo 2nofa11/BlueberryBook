@@ -52,6 +52,9 @@ export const equalityOperator = () => {
 export const logicalOperator = () => {
   rl.question("数値を入力してください", (line) => {
     const num = Number(line);
+    // ある審議値がfalseの時のみに処理を行う時に!使用
+    if (!Number.isNaN(num)) console.log("NaNでない");
+
     if (0 <= num && num < 100) return console.log(`${num}は0以上100未満です`);
     console.log(`${num}は0以上100未満ではありません`);
     rl.close();
