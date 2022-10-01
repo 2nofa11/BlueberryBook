@@ -48,3 +48,12 @@ export const equalityOperator = () => {
     rl.close();
   });
 };
+
+export const logicalOperator = () => {
+  rl.question("数値を入力してください", (line) => {
+    const num = Number(line);
+    if (0 <= num && num < 100) return console.log(`${num}は0以上100未満です`);
+    console.log(`${num}は0以上100未満ではありません`);
+    rl.close();
+  });
+};
