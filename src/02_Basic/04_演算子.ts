@@ -32,3 +32,19 @@ export const comparisonOperator = () => {
   const right2 = 50n;
   console.log(left2 >= right2);
 };
+
+import { createInterface } from "readline";
+
+const rl = createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+export const equalityOperator = () => {
+  rl.question("パスワードを入力してください", (password) => {
+    // とてもよくつかわる文（厳密な一致判定）
+    if (password === "foo") return console.log("ようこそ");
+    console.log("誰？");
+    rl.close();
+  });
+};
