@@ -78,7 +78,7 @@ export const shortCircuitRating2 = () => {
 };
 
 // 条件演算子
-export const ConditionalOperator = () => {
+export const conditionalOperator = () => {
   rl.question("数値を入力してください", (line) => {
     const num = Number(line);
     const message =
@@ -86,6 +86,17 @@ export const ConditionalOperator = () => {
         ? `${num}は0以上100未満です。`
         : `${num}は0以上100未満ではありません`;
     console.log(message);
+    rl.close();
+  });
+};
+
+// 代入演算子
+export const assignmentOperator = () => {
+  rl.question("名前を入力してください", (name) => {
+    if (name === "") {
+      name = "名無し";
+    }
+    console.log(`${name}さん、ようこそ`);
     rl.close();
   });
 };
