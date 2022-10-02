@@ -76,3 +76,16 @@ export const shortCircuitRating2 = () => {
     rl.close();
   });
 };
+
+// 条件演算子
+export const ConditionalOperator = () => {
+  rl.question("数値を入力してください", (line) => {
+    const num = Number(line);
+    const message =
+      0 <= num && num < 100
+        ? `${num}は0以上100未満です。`
+        : `${num}は0以上100未満ではありません`;
+    console.log(message);
+    rl.close();
+  });
+};
