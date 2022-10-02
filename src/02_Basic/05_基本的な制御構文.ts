@@ -41,3 +41,26 @@ export const switch1 = () => {
     rl.close();
   });
 };
+
+export const while1 = () => {
+  let sum = 0;
+  let i = 1;
+  while (i <= 10) {
+    sum += i;
+    i++;
+  }
+  console.log(sum);
+};
+
+export const while2 = () => {
+  let sum = 0;
+  let i = 1;
+  while (true) {
+    if (i > 100) {
+      break;
+    }
+    sum += i;
+    i++;
+  }
+  console.log(sum);
+};
