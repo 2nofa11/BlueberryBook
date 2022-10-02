@@ -9,3 +9,12 @@ export const if2 = (userName: string) => {
     userName = "名無し";
   }
 };
+
+export const ifElse = (userName: string) => {
+  if (userName !== "") {
+    console.log("名前あって偉い");
+  } else {
+    console.log("名前入力しろ");
+    userName = "名無し";
+  }
+};
