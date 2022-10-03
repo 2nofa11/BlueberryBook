@@ -1,2 +1,2 @@
-import { while3 } from "./02_Basic/05_基本的な制御構文";
-while3();
+import { for1 } from "./02_Basic/05_基本的な制御構文";
+for1();
