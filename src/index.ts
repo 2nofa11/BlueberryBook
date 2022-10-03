@@ -1,2 +1,2 @@
-import { for1 } from "./02_Basic/05_基本的な制御構文";
-for1();
+import { fizzBuzz } from "./02_Basic/06_力試し";
+fizzBuzz();
