@@ -108,3 +108,15 @@ export const objectInfo = () => {
   baz.num = 111;
   console.log(foo.num);
 };
+
+export const objectInfoSpread = () => {
+  const foo = { obj: { num: 1234 } };
+  const fooCopy = foo;
+  console.log(foo === fooCopy ? "一致" : "別オブジェクトなので不一致");
+
+  const bar = { ...foo };
+
+  console.log(foo === bar ? "一致" : "別オブジェクトなので不一致");
+  bar.obj.num = 0;
+  console.log(foo.obj.num);
+};
