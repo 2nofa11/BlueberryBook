@@ -52,3 +52,17 @@ export const propertyAccess = () => {
     rl.close();
   });
 };
+
+export const spread = () => {
+  const obj = {
+    bar: 456,
+    baz: 789,
+  };
+
+  const obj2 = {
+    foo: 123,
+    ...obj,
+  };
+
+  console.log(obj2);
+};
