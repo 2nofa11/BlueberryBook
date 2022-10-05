@@ -32,3 +32,23 @@ export const basic2 = () => {
   console.log(obj[1]);
   console.log(obj.hoge);
 };
+
+import { createInterface } from "readline";
+
+const rl = createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+const message = {
+  good: "0以上",
+  bad: "負の値",
+};
+
+export const propertyAccess = () => {
+  rl.question("数値を入力してください", (line) => {
+    const num = Number(line);
+    console.log(message[num >= 0 ? "good" : "bad"]);
+    rl.close();
+  });
+};

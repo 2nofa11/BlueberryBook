@@ -1,2 +1,2 @@
-import { basic2 } from "./03_Object/01_オブジェクトとは";
-basic2();
+import { propertyAccess } from "./03_Object/01_オブジェクトとは";
+propertyAccess();
