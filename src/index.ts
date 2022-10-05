@@ -1,2 +1,2 @@
-import { spread3 } from "./03_Object/01_オブジェクトとは";
-spread3();
+import { objectInfo } from "./03_Object/01_オブジェクトとは";
+objectInfo();

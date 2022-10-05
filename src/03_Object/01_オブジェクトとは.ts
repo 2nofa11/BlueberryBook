@@ -97,3 +97,14 @@ export const spread3 = () => {
   };
   console.log(obj);
 };
+
+export const objectInfo = () => {
+  const foo = { num: 1234 };
+  console.log(foo.num);
+  const bar = foo;
+  bar.num = 0;
+  console.log(foo.num);
+  const baz = { ...foo };
+  baz.num = 111;
+  console.log(foo.num);
+};
