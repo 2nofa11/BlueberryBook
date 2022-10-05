@@ -81,3 +81,19 @@ export const spread2 = () => {
 
   console.log(obj2);
 };
+
+export const spread3 = () => {
+  const obj1 = {
+    foo: 1,
+    bar: 2,
+  };
+  const obj2 = {
+    bar: 999,
+    baz: 3,
+  };
+  const obj = {
+    ...obj1,
+    ...obj2,
+  };
+  console.log(obj);
+};
