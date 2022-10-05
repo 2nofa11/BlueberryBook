@@ -53,7 +53,7 @@ export const propertyAccess = () => {
   });
 };
 
-export const spread = () => {
+export const spread1 = () => {
   const obj = {
     bar: 456,
     baz: 789,
@@ -62,6 +62,21 @@ export const spread = () => {
   const obj2 = {
     foo: 123,
     ...obj,
+  };
+
+  console.log(obj2);
+};
+
+export const spread2 = () => {
+  const obj = {
+    bar: 456,
+    baz: 789,
+    foo: 123,
+  };
+
+  const obj2 = {
+    ...obj,
+    foo: 999,
   };
 
   console.log(obj2);
