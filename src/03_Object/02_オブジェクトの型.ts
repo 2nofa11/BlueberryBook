@@ -48,3 +48,11 @@ export const optionalObj = () => {
   console.log(obj, obj2);
   if (obj2.baz !== undefined) console.log(obj2.baz * 10);
 };
+
+export const readonlyObj = () => {
+  type MyObj = {
+    readonly foo: number;
+  };
+  const obj: MyObj = { foo: 1 };
+  // obj.foo = 12;
+};
