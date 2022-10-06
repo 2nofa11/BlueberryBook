@@ -56,3 +56,10 @@ export const readonlyObj = () => {
   const obj: MyObj = { foo: 1 };
   // obj.foo = 12;
 };
+
+export const useTypeof = () => {
+  const obj1 = { foo: 0, bar: "hi" };
+  type T = typeof obj1;
+  const obj2: T = { foo: 1, bar: "world" };
+  console.log(obj1, obj2);
+};
