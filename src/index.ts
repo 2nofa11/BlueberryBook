@@ -1,2 +1,2 @@
-import { objectInfoSpread } from "./03_Object/01_オブジェクトとは";
-objectInfoSpread();
+import { objType1 } from "./03_Object/02_オブジェクトの型";
+objType1();
