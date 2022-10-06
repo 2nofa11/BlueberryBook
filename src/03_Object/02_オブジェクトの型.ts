@@ -20,3 +20,17 @@ export const objType2 = () => {
   };
   console.log(obj);
 };
+
+// インデックスシグネスチャ
+export const indexSignature = () => {
+  type PriceData = {
+    [key: string]: number;
+  };
+  const data: PriceData = {
+    apple: 123,
+    coffee: 200,
+  };
+  data.chicken = 111; //これはOK
+  // data.弁当 = ""
+  console.log(data);
+};
