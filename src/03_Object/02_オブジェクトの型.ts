@@ -34,3 +34,17 @@ export const indexSignature = () => {
   // data.弁当 = ""
   console.log(data);
 };
+
+export const optionalObj = () => {
+  type MyObj = {
+    foo: boolean;
+    bar: boolean;
+    baz?: number;
+  };
+
+  const obj: MyObj = { foo: true, bar: true };
+  const obj2: MyObj = { foo: true, bar: true, baz: 1 };
+
+  console.log(obj, obj2);
+  if (obj2.baz !== undefined) console.log(obj2.baz * 10);
+};
