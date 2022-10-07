@@ -51,3 +51,14 @@ export const family = () => {
   const animalFamily: AnimalFamily = humanFamily;
   console.log(animalFamily);
 };
+
+export const user = () => {
+  type User = { name: string; age: number };
+  const obj = {
+    name: "taro",
+    age: 12,
+    tel: "09011112222",
+  };
+  const obj2: User = obj;
+  console.log(obj2);
+};
