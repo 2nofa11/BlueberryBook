@@ -1,5 +1,6 @@
-export const structuralSubtypes();
-= () => {
+import { type } from "os";
+
+export const structuralSubtypes = () => {
   type FooBar = {
     foo: string;
     bar: number;
@@ -16,4 +17,37 @@ export const structuralSubtypes();
   };
   const obj2: FooBar = obj1;
   console.log(obj2);
+};
+
+export const family = () => {
+  type Animal = {
+    age: number;
+  };
+  type Human = {
+    age: number;
+    name: string;
+  };
+
+  type AnimalFamily = {
+    familyName: string;
+    mother: Animal;
+    father: Animal;
+    child: Animal;
+  };
+  type HumanFamily = {
+    familyName: string;
+    mother: Human;
+    father: Human;
+    child: Human;
+  };
+
+  const humanFamily: HumanFamily = {
+    familyName: "Human",
+    mother: { age: 10, name: "mom" },
+    father: { age: 10, name: "dad" },
+    child: { age: 10, name: "kid" },
+  };
+  console.log(humanFamily);
+  const animalFamily: AnimalFamily = humanFamily;
+  console.log(animalFamily);
 };
