@@ -24,3 +24,12 @@ export const nest = () => {
   } = nested;
   console.log(num, foo, bar);
 };
+
+export const array = () => {
+  const arr = [1, 2, 3, 4, 5, 6];
+  const [, foo, , bar, , baz] = arr;
+  console.log(foo, bar, baz);
+  const tuple: [string, number] = ["hoge", 28];
+  const [name, age] = tuple;
+  console.log(name, age);
+};
