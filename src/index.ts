@@ -1,2 +1,2 @@
-import { tapleTypes } from "./03_Object/05_配列";
-tapleTypes();
+import { destructuringAssignment } from "./03_Object/06_分割代入";
+destructuringAssignment();
