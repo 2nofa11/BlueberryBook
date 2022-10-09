@@ -35,3 +35,26 @@ export const useExtends = () => {
   };
   console.log(t);
 };
+
+export const useOptional = () => {
+  type HasName = {
+    name: string;
+  };
+  type Animal = {
+    name: string;
+    age: number;
+  };
+  type Family<Parent = Animal, Child extends HasName = Animal> = {
+    mother: Parent;
+    father: Parent;
+    child: Child;
+  };
+  type S = Family<string>;
+  type T = Family;
+  const s: S = {
+    mother: "m",
+    father: "d",
+    child: { name: "kid", age: 10 },
+  };
+  console.log(s);
+};
