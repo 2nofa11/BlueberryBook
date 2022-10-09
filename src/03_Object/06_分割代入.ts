@@ -9,3 +9,18 @@ export const destructuringAssignment2 = () => {
   const { foo, bar: barVar, "foo bar": fooBar } = obj;
   console.log(foo, barVar, fooBar);
 };
+
+export const nest = () => {
+  const nested = {
+    num: 123,
+    obj: {
+      foo: "hello",
+      bar: "world",
+    },
+  };
+  const {
+    num,
+    obj: { foo, bar },
+  } = nested;
+  console.log(num, foo, bar);
+};
