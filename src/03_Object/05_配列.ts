@@ -38,3 +38,11 @@ export const array5 = () => {
     console.log(elm);
   }
 };
+
+export const tapleTypes = () => {
+  let taple: [string, number] = ["foo", 1];
+  taple = ["aiu", 123];
+  const str = taple[0];
+  const num = taple[1];
+  console.log(str, num);
+};
