@@ -33,3 +33,25 @@ export const array = () => {
   const [name, age] = tuple;
   console.log(name, age);
 };
+
+export const defaultValue = () => {
+  type Obj = { foo?: number };
+  const obj1: Obj = {};
+  const obj2: Obj = { foo: 123 };
+
+  const { foo = 500 } = obj1;
+  console.log(foo);
+  const { foo: bar = 500 } = obj2;
+  console.log(bar);
+};
+
+export const rest = () => {
+  const obj = {
+    foo: 123,
+    bar: "str",
+    baz: false,
+  };
+  const { foo, ...restObj } = obj;
+  console.log(foo);
+  console.log(restObj);
+};
