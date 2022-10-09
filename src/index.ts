@@ -1,2 +1,2 @@
-import { user } from "./03_Object/03_部分型関係";
-user();
+import { typeArgument } from "./03_Object/04_型引数を持つ型";
+typeArgument();
