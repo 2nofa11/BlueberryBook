@@ -29,5 +29,12 @@ export const array4 = () => {
   console.log(arr);
   arr.unshift(-1);
   console.log(arr);
-  console.log(arr.length);
+  console.log(arr.includes(1));
+};
+
+export const array5 = () => {
+  const arr = [1, 10, 100];
+  for (const elm of arr) {
+    console.log(elm);
+  }
 };
