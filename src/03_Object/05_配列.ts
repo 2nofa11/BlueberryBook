@@ -21,3 +21,13 @@ export const array3 = () => {
 
   const arr3 = [100, true, "文字列"];
 };
+
+export const array4 = () => {
+  const arr: number[] = [1, 2, 100];
+  console.log(arr);
+  arr.push(10);
+  console.log(arr);
+  arr.unshift(-1);
+  console.log(arr);
+  console.log(arr.length);
+};
