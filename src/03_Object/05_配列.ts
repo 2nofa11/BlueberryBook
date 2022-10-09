@@ -10,3 +10,14 @@ export const array2 = () => {
   arr[1] = 5;
   console.log(arr);
 };
+
+export const array3 = () => {
+  const arr: boolean[] = [true, false];
+
+  const arr2: Array<{
+    name: string;
+  }> = [{ name: "山田" }, { name: "佐藤" }];
+  console.log(arr);
+
+  const arr3 = [100, true, "文字列"];
+};
