@@ -34,3 +34,16 @@ export const regularExpression2 = () => {
     console.log(result[1]);
   }
 };
+
+export const mapObj = () => {
+  const map: Map<String, number> = new Map();
+  map.set("foo", 1234);
+  console.log(map.get("foo"));
+  console.log(map.get("bar"));
+};
+
+export const setObj = () => {
+  const set: Set<string> = new Set();
+  set.add("1234");
+  console.log(set.values());
+};
