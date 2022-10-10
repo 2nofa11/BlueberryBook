@@ -10,21 +10,19 @@ export const challenge = () => {
   Jhon,17,0
   Mary,14,1`;
 
-  // コードを書く
-  const users: User[] = [];
-  const lines = data.split("\n");
-  for (const line of lines) {
-    if (line === "") {
-      continue;
-    }
-    const [name, ageString, premiumUserString] = line.split(",");
-    const user: User = {
-      name: name.replace(" ", ""),
-      age: Number(ageString),
-      premiumUser: premiumUserString === "1",
-    };
-    users.push(user);
-  }
+  const users: User[] = data
+    .split("\n")
+    .filter((line) => line !== "")
+    .map((line) => {
+      const [name, ageString, premiumUserString] = line.split(",");
+
+      return {
+        name,
+        age: Number(ageString),
+        premiumUser: premiumUserString === "1",
+      };
+    });
+
   for (const user of users) {
     if (user.premiumUser) {
       console.log(`${user.name} (${user.age})はプレミアムユーザーです。`);
