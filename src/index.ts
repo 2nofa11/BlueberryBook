@@ -1,2 +1,2 @@
-import { primitiveProp } from "./03_Object/07_その他の組み込みオブジェクト";
-primitiveProp();
+import { challenge } from "./03_Object/08_力試し";
+challenge();
