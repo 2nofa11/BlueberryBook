@@ -21,3 +21,16 @@ export const regularExpression1 = () => {
   console.log(r.test("1abc"));
   console.log(r.test("こんにちわ"));
 };
+
+export const regularExpression2 = () => {
+  //文字列.replace(正規表現,置換文字列)
+  console.log("Hello,abbbbc world! abc".replace(/ab+c/, "foobar"));
+  console.log("Hello,abbbbc world! abc".replace(/ab+c/g, "foobar"));
+
+  // 文字列.match(正規表現)
+  const result = "Hello,abbbbc world! abc".match(/a(b+)c/);
+  if (result !== null) {
+    console.log(result[0]);
+    console.log(result[1]);
+  }
+};
