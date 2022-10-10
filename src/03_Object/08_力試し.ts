@@ -8,22 +8,22 @@ export const challenge = () => {
   const data: string = `
   uhyo,26,1
   Jhon,17,0
-  Mary,14,1
-  `;
+  Mary,14,1`;
 
   // コードを書く
   const users: User[] = [];
-  const userInfo = data.split("\n");
-  for (const info of userInfo) {
-    if (info.match(/,/)) {
-      const userInfo = info.split(",");
-      const user: User = {
-        name: userInfo[0].replace(" ", ""),
-        age: Number(userInfo[1]),
-        premiumUser: Boolean(Number(userInfo[2])),
-      };
-      users.push(user);
+  const lines = data.split("\n");
+  for (const line of lines) {
+    if (line === "") {
+      continue;
     }
+    const [name, ageString, premiumUserString] = line.split(",");
+    const user: User = {
+      name: name.replace(" ", ""),
+      age: Number(ageString),
+      premiumUser: premiumUserString === "1",
+    };
+    users.push(user);
   }
   for (const user of users) {
     if (user.premiumUser) {
