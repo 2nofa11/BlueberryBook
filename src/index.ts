@@ -1,2 +1,2 @@
-import { rest } from "./03_Object/06_分割代入";
-rest();
+import { dateObj } from "./03_Object/07_その他の組み込みオブジェクト";
+dateObj();
