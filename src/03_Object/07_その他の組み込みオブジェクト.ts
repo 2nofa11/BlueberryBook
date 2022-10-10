@@ -47,3 +47,9 @@ export const setObj = () => {
   set.add("1234");
   console.log(set.values());
 };
+
+export const primitiveProp = () => {
+  type HasLength = { length: number };
+  const obj: HasLength = "foo";
+  console.log(obj);
+};
