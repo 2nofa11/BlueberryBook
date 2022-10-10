@@ -13,3 +13,11 @@ export const dateUsing = () => {
   const date2 = new Date(timeNum);
   console.log(date2);
 };
+
+export const regularExpression1 = () => {
+  const r = /^ab+c/;
+
+  console.log(r.test("abc"));
+  console.log(r.test("1abc"));
+  console.log(r.test("こんにちわ"));
+};
