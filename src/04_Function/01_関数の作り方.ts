@@ -15,3 +15,11 @@ export function helloWorldNTTimes(n: number): void {
     console.log("Hello,world!");
   }
 }
+
+export type Human = {
+  height: number;
+  weight: number;
+};
+export const clacBMI = function ({ height, weight }: Human): number {
+  return weight / height ** 2;
+};
