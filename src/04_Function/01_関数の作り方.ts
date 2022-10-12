@@ -24,6 +24,9 @@ export const clacBMI = function ({ height, weight }: Human): number {
   return weight / height ** 2;
 };
 
-export const clacBMIbyArrow = ({ height, weight }: Human): number => {
+export const clacBMIbyArrow1 = ({ height, weight }: Human): number => {
   return weight / height ** 2;
 };
+
+export const clacBMIbyArrow2 = ({ height, weight }: Human): number =>
+  weight / height ** 2;
