@@ -44,3 +44,9 @@ export const restParameters = (base: number, ...args: number[]): number => {
   for (const num of args) result += num;
   return result;
 };
+
+export const spread = () => {
+  const sum = (a: number, b: number, c: number) => a + b + c;
+  const num: [number, number, number] = [1, 2, 3];
+  console.log(sum(...num));
+};
