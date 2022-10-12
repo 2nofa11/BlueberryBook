@@ -30,3 +30,10 @@ export const clacBMIbyArrow1 = ({ height, weight }: Human): number => {
 
 export const clacBMIbyArrow2 = ({ height, weight }: Human): number =>
   weight / height ** 2;
+
+export const method = {
+  double1(num: number): number {
+    return num * 2;
+  },
+  double2: (num: number): number => num * 2,
+};
