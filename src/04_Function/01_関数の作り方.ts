@@ -58,3 +58,17 @@ export const toLowerOrUpper = (str: string, upper: boolean = false): void => {
     console.log(str.toLocaleLowerCase());
   }
 };
+
+export const callbackFnc = () => {
+  type User = { name: string; age: number };
+  const getName = (u: User) => {
+    console.log(u);
+    return u.name;
+  };
+  const users: User[] = [
+    { name: "hoge", age: 12 },
+    { name: "foo", age: 13 },
+  ];
+  const names = users.map(getName);
+  console.log(names);
+};
