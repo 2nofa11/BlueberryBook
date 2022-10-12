@@ -37,3 +37,10 @@ export const method = {
   },
   double2: (num: number): number => num * 2,
 };
+
+export const restParameters = (base: number, ...args: number[]): number => {
+  let result = base * 1000;
+  console.log(args);
+  for (const num of args) result += num;
+  return result;
+};
