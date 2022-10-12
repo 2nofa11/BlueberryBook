@@ -50,3 +50,11 @@ export const spread = () => {
   const num: [number, number, number] = [1, 2, 3];
   console.log(sum(...num));
 };
+
+export const toLowerOrUpper = (str: string, upper?: boolean): void => {
+  if (upper) {
+    console.log(str.toUpperCase());
+  } else {
+    console.log(str.toLocaleLowerCase());
+  }
+};
