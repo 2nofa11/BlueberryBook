@@ -1,3 +1,3 @@
-import { clacBMIbyArrow2, Human } from "./04_Function/01_関数の作り方";
-const uhyo: Human = { height: 1.7, weight: 60 };
-console.log(clacBMIbyArrow2(uhyo));
+import { method } from "./04_Function/01_関数の作り方";
+console.log(method.double1(100));
+console.log(method.double2(100));
