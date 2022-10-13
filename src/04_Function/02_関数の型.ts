@@ -8,3 +8,11 @@ export const g = (num: number) => {
     console.log("X");
   }
 };
+
+export const range = (min: number, max: number): number[] => {
+  const result = [];
+  for (let i = min; i <= max; i++) {
+    result.push(i);
+  }
+  return result;
+};
