@@ -22,3 +22,13 @@ export const callBackFnc = () => {
   const arr2 = num.filter((x) => x % 3 === 0);
   console.log(arr2);
 };
+
+export const contextualTyping = () => {
+  type Greet = {
+    greet: (str: string) => string;
+  };
+  const obj: Greet = {
+    greet: (str) => `Hi ${str}`,
+  };
+  console.log(obj.greet("aa"));
+};
