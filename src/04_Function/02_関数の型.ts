@@ -32,3 +32,18 @@ export const contextualTyping = () => {
   };
   console.log(obj.greet("aa"));
 };
+
+export const callSignature = () => {
+  type MyFunc = {
+    isUsed?: boolean; // プロパティ
+    (arg: number): void; //コードシグネスチャ（関数型）
+  };
+
+  const double: MyFunc = (arg: number) => {
+    console.log(arg * 2);
+  };
+
+  double.isUsed = true;
+  console.log(double.isUsed);
+  double(1000);
+};
