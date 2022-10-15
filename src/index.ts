@@ -1,2 +1,2 @@
-import { callSignature } from "./04_Function/02_関数の型";
-callSignature();
+import { partialTypeByReturn } from "./04_Function/03_関数型の部分型関係";
+partialTypeByReturn();
