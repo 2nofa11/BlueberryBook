@@ -1,2 +1,2 @@
-import { partialTypeByReturn } from "./04_Function/03_関数型の部分型関係";
-partialTypeByReturn();
+import { partialTypeByArg } from "./04_Function/03_関数型の部分型関係";
+partialTypeByArg();
