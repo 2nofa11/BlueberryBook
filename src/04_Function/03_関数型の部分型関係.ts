@@ -16,3 +16,24 @@ export const partialTypeByReturn = () => {
   const obj: HasName = f(100);
   console.log(obj);
 };
+
+export const partialTypeByArg = () => {
+  type HasName = {
+    // T
+    name: string;
+  };
+  type HasNameAndAge = {
+    // S
+    name: string;
+    age: number;
+  };
+  // T
+  const showName = (obj: HasName, num: number) => {
+    console.log(obj.name);
+  };
+  // S
+  // showNameの型「(obj: HasName) => void」
+  const g: (obj: HasNameAndAge, num: number) => void = showName;
+
+  g({ name: "ABC", age: 1 }, 100);
+};
