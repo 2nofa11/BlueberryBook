@@ -1,3 +1,4 @@
+import { type } from "os";
 import { DebugLoggerFunction } from "util";
 
 export const generics = () => {
@@ -38,4 +39,24 @@ export const genericsDefine = () => {
     right,
   ];
   console.log(pair<number, string>(5, "a"));
+};
+
+export const genericsExtends = () => {
+  const repeat = <T extends { name: string }>(
+    element: T,
+    length: number
+  ): T[] => {
+    const result: T[] = [];
+    for (let i = 0; i < length; i++) {
+      result.push(element);
+    }
+    return result;
+  };
+
+  type HasNameAndAge = {
+    name: string;
+    age: number;
+  };
+
+  console.log(repeat<HasNameAndAge>({ name: "uhyo", age: 10 }, 2));
 };
