@@ -1,2 +1,2 @@
-import { genericsDefine } from "./04_Function/04_ジェネリクス";
-genericsDefine();
+import { genericsExtends } from "./04_Function/04_ジェネリクス";
+genericsExtends();
