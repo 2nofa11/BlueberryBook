@@ -37,3 +37,17 @@ export const partialTypeByArg = () => {
 
   g({ name: "ABC", age: 1 }, 100);
 };
+
+export const partialTypeByArgCount = () => {
+  type UnaryFunc = (arg: number) => number;
+  type BinaryFunc = (left: number, right: number) => number;
+
+  const double: UnaryFunc = (arg) => arg * 2;
+  const add: BinaryFunc = (left, right) => left + right;
+  // BinaryFuncが使えることの確認
+  const result = add(10, 20);
+  console.log(result);
+  // 部分型関係を利用
+  const bin: BinaryFunc = double;
+  console.log(bin(10, 20));
+};
