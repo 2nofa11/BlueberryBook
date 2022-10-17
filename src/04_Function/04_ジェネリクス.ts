@@ -62,14 +62,25 @@ export const genericsExtends = () => {
 };
 
 export const shortcut = () => {
-  function repeat<T>(element: T, length: number): T[] {
+  const repeat = function <T>(element: T, length: number): T[] {
     const result: T[] = [];
     for (let i = 0; i < length; i++) {
       result.push(element);
     }
     return result;
-  }
+  };
 
   const result = repeat("a", 3);
   console.log(result);
+};
+
+export const funcType = () => {
+  type Func = <T>(element: T, length: number) => T[];
+  const repeat: Func = function <T>(element: T, length: number): T[] {
+    const result: T[] = [];
+    for (let i = 0; i < length; i++) {
+      result.push(element);
+    }
+    return result;
+  };
 };
