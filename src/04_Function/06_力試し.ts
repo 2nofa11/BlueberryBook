@@ -1,5 +1,5 @@
 export const practice = () => {
-  for (let i = 1; i <= 100; i++) {
+  for (const i of sequence(1, 100)) {
     const message = getFizzBuzzString(i);
     console.log(message);
   }
@@ -15,4 +15,12 @@ const getFizzBuzzString = (num: number): string => {
   } else {
     return String(num);
   }
+};
+
+const sequence = (min: number, max: number): number[] => {
+  const numArr: number[] = [];
+  for (let i = min; i <= max; i++) {
+    numArr.push(i);
+  }
+  return numArr;
 };
