@@ -1,2 +1,2 @@
-import { shortcut } from "./04_Function/04_ジェネリクス";
-shortcut();
+import { functionScope } from "./04_Function/05_スコープ";
+functionScope();
