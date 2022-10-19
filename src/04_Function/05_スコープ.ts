@@ -13,3 +13,11 @@ export const functionScope = () => {
   console.log(repeat("hoge"));
   console.log(repeatLength);
 };
+
+export function sabayomi(age: number) {
+  if (age >= 20) {
+    const lie = age - 5;
+    return lie;
+  }
+  return age;
+}
