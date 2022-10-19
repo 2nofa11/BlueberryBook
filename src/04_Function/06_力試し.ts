@@ -26,14 +26,14 @@ const sequence = (min: number, max: number): number[] => {
 };
 
 export const practiceCallback = () => {
-  function map(array: number[], callback: (num: number) => number): number[] {
-    const newArr = [];
+  function map<T, S>(array: T[], callback: (num: T) => S): S[] {
+    const newArr: S[] = [];
     for (const i of array) {
       newArr.push(callback(i));
     }
     return newArr;
   }
-  const data = [1, 1, 3, 3, 5, 8, 13];
-  const result = map(data, (x) => x * 10);
+  const data = [-1, 1, -3, -3, 5, 8, 13];
+  const result: boolean[] = map(data, (x) => x >= 0);
   console.log(result);
 };
