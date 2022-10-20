@@ -1,2 +1,2 @@
-import { practiceCallback } from "./04_Function/06_力試し";
-practiceCallback();
+import { usingClass } from "./05_Class/01_クラスの宣言と使用";
+usingClass();
