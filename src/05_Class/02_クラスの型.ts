@@ -27,3 +27,44 @@ export const usingClass = () => {
   console.log(u.name,u.age)
 
 };
+
+export const usingInstanceof = () =>{
+  const uhyo = new User()
+  console.log(uhyo instanceof User)
+
+  const jhon:User ={
+    name:"Jhon",
+    age:10,
+    isAdult:() => true
+  }
+  console.log(jhon instanceof User)
+}
+
+type HasAge = {
+  age:number
+}
+class HasUser {
+  name:string;
+  age:number;
+
+  constructor(name:string,age:number){
+    this.name = name
+    this.age = age
+  }
+}
+
+function getPrice(customer:HasAge){
+  if(customer instanceof HasUser && customer.name === "uhyo") return 0
+  return customer.age < 18 ? 1000 : 1800
+}
+
+
+export const useCaseInstanceof = () =>{
+  const customer1:HasAge = {age:15}
+  const customer2:HasAge = {age:20}
+  const uhyo = new HasUser("uhyo",19)
+
+  console.log(getPrice(customer1))
+  console.log(getPrice(customer2))
+  console.log(getPrice(uhyo))
+}
