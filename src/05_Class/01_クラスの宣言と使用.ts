@@ -1,12 +1,12 @@
 class User<T> {
   static adminName: string = "uhyo";
   static getAdminUser() {
-    return new User(User.adminName, 23);
+    return new User(User.adminName, 23, "");
   }
 
-  static adminUser: User;
+  static adminUser: User<string>;
   static {
-    this.adminUser = new User("admin", 9999);
+    this.adminUser = new User("admin", 9999, "");
   }
   public name: string;
   #age: number = 0;
