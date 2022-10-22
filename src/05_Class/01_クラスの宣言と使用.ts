@@ -1,4 +1,4 @@
-class User {
+class User<T> {
   static adminName: string = "uhyo";
   static getAdminUser() {
     return new User(User.adminName, 23);
@@ -10,10 +10,12 @@ class User {
   }
   public name: string;
   #age: number = 0;
+  readonly data: T;
 
-  constructor(name: string, age: number) {
+  constructor(name: string, age: number, data: T) {
     this.name = name;
     this.#age = age;
+    this.data = data;
   }
 
   isAdult(): boolean {
@@ -30,8 +32,10 @@ class User {
 }
 
 export const usingClass = () => {
-  const uhyo = new User("uhyo", 1);
-  console.log(User.adminUser.getAge());
+  const uhyo = new User<string>("uhyo", 1, "追加データ");
+  console.log(uhyo.data);
+  const jhon = new User<object>("jhon", 100, { num: 123 });
+  console.log(jhon.data);
 };
 
 export const staticInitializationBlock = () => {
