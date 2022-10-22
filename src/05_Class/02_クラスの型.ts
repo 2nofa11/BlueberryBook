@@ -1,3 +1,5 @@
+import { type } from "os";
+
 class User {
   name: string = "";
   age: number = 0;
@@ -14,4 +16,14 @@ export const usingClass = () => {
     age: 12,
     isAdult: () => true,
   };
+
+
+  type MyUserConstructor = new () => User
+  // UserはMyUserConstrictor型を持つ
+  const MyUser:MyUserConstructor = User
+  // MyUserはnewで使用可能
+  const u = new MyUser()
+  // uはuser型を持つ
+  console.log(u.name,u.age)
+
 };
