@@ -4,13 +4,7 @@ class User {
     return new User(User.adminName, 23);
   }
 
-  name?: string;
-  private age: number = 0;
-
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
-  }
+  constructor(public name: string, private age: number = 22) {}
 
   isAdult(): boolean {
     return this.age >= 20;
@@ -22,6 +16,6 @@ class User {
 }
 
 export const usingClass = () => {
-  const uhyo = new User("uhyo", 28);
-  //   console.log(uhyo.age); errorになる
+  const uhyo = new User("uhyo", 1);
+  console.log(uhyo.isAdult());
 };
