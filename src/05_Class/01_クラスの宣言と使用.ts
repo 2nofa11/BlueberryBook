@@ -1,4 +1,4 @@
-class User {
+const User = class {
   static adminName: string = "uhyo";
   static getAdminUser() {
     return new User(User.adminName, 23);
@@ -13,7 +13,7 @@ class User {
   public setAge(newAge: number) {
     this.age = newAge;
   }
-}
+};
 
 export const usingClass = () => {
   const uhyo = new User("uhyo", 1);
