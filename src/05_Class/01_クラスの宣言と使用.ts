@@ -1,4 +1,9 @@
 class User {
+  static adminName: string = "uhyo";
+  static getAdminUser() {
+    return new User(User.adminName, 23);
+  }
+
   name?: string;
   age: number = 0;
 
@@ -17,8 +22,11 @@ class User {
 }
 
 export const usingClass = () => {
-  const uhyo = new User("uhyo", 0);
-  console.log(uhyo.isAdult());
-  uhyo.setAge(26);
-  console.log(uhyo.isAdult());
+  console.log(User.adminName);
+  const admin = User.getAdminUser();
+  console.log(admin.age);
+  console.log(admin.isAdult());
+
+  const uhyo = new User("a", 28);
+  //   console.log(uhyo.adminName)
 };
