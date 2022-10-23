@@ -2,15 +2,17 @@ import exp = require("constants");
 
 class User {
   name: string;
-  #age: number;
+  protected age: number;
+  private _isAdult: boolean;
 
   constructor(name: string, age: number) {
     this.name = name;
-    this.#age = age;
+    this.age = age;
+    this._isAdult = this.age >= 20;
   }
 
   public isAdult(): boolean {
-    return this.#age >= 20;
+    return this._isAdult;
   }
 }
 
@@ -21,14 +23,17 @@ class PremiumUser extends User {
     this.rank = rank;
   }
 
-  public override isAdult(): boolean {
-    return true;
+  setAge(_isAdult: number) {
+    this.age = _isAdult;
   }
+  // public override isAdult(): boolean {
+  //   return this.age >= 10;
+  // }
 }
 
 export const usingPremiumUser = () => {
-  const uhyo = new PremiumUser("uhyo", 10, 2);
-  console.log(uhyo.rank);
-  console.log(uhyo.name);
+  const uhyo = new PremiumUser("uhyo", 9, 2);
+  console.log(uhyo.isAdult());
+  uhyo.setAge(100);
   console.log(uhyo.isAdult());
 };
