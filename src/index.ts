@@ -1,2 +1,2 @@
-import { useCaseInstanceof } from "./05_Class/02_クラスの型";
-useCaseInstanceof();
+import { usingPremiumUser } from "./05_Class/03_クラスの継承";
+usingPremiumUser();
