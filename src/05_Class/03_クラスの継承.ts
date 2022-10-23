@@ -15,11 +15,19 @@ class User {
 }
 
 class PremiumUser extends User {
-  rank: number = 1
+  rank: number 
+  constructor(name:string,age:number,rank:number){
+    super(name,age)
+    this.rank = rank
+  }
+
+  public isAdult(): boolean {
+    return true
+  }
 }
 
 export const usingPremiumUser = () => {
-  const uhyo = new PremiumUser("uhyo",26)
+  const uhyo = new PremiumUser("uhyo",10,2)
   console.log(uhyo.rank)
   console.log(uhyo.name)
   console.log(uhyo.isAdult())
