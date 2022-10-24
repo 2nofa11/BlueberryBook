@@ -1,2 +1,2 @@
-import { usingThis } from "./05_Class/04_this";
-usingThis();
+import { apply } from "./05_Class/04_this";
+apply();

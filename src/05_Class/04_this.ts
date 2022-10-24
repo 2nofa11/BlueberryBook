@@ -45,3 +45,12 @@ export const userObj = () => {
   user.age = 10;
   console.log(user.isAdult());
 };
+
+export const apply = () => {
+  const uhyo = new User("uhyo", 21);
+  const jhon = new User("Jhon", 15);
+
+  console.log(uhyo.isAdult());
+
+  console.log(uhyo.isAdult.apply(jhon, []));
+};
