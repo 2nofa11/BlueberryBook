@@ -1,2 +1,2 @@
-import { usingPremiumUser } from "./05_Class/03_クラスの継承";
-usingPremiumUser();
+import { usingThis } from "./05_Class/04_this";
+usingThis();
