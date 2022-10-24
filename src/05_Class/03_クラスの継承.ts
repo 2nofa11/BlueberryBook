@@ -1,6 +1,6 @@
 import exp = require("constants");
 
-class User {
+class User implements HasName {
   name: string;
   protected age: number;
   private _isAdult: boolean;
@@ -36,4 +36,8 @@ export const usingPremiumUser = () => {
   console.log(uhyo.isAdult());
   uhyo.setAge(100);
   console.log(uhyo.isAdult());
+};
+
+type HasName = {
+  name: string;
 };
