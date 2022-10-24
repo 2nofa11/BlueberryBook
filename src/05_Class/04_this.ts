@@ -10,15 +10,26 @@ class User {
   public isAdult(): boolean {
     return this.#age >= 20;
   }
+
+  public filterOlder(users: readonly User[]): User[] {
+    return users.filter((user) => user.#age > this.#age);
+  }
+
+  public filterOlderFnc(users: User[]): User[] {
+    const _this = this;
+    return users.filter(function (u) {
+      return u.#age > _this.#age;
+    });
+  }
 }
 
 export const usingThis = () => {
   const uhyo = new User("uhyo", 21);
   const jhon = new User("Jhon", 15);
+  const Bob = new User("Bob", 100);
 
-  console.log(uhyo.isAdult());
-  console.log(jhon.isAdult());
-  console.log(uhyo.isAdult() === jhon.isAdult());
+  const older = uhyo.filterOlder([jhon, Bob]);
+  console.log(older);
 };
 
 const user = {
