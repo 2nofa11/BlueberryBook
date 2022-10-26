@@ -27,3 +27,17 @@ export const tryCatch = () => {
     throw error;
   }
 };
+
+export const globalEscape = () => {
+  try {
+    throwError();
+  } catch (err) {
+    console.log(err);
+  }
+
+  function throwError() {
+    const error = new Error("エラー発生");
+    throw error;
+    console.log("関数から脱出するのでここでは実行されない");
+  }
+};
