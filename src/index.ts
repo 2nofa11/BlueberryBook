@@ -1,2 +1,2 @@
-import { useRepeatArr } from "./05_Class/04_this";
-useRepeatArr();
+import { error } from "./05_Class/05_例外処理";
+error();
