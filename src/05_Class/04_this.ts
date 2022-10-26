@@ -76,3 +76,22 @@ export const thisWithoutFnc = () => {
   const obj = new A();
   console.log(obj.bar, obj.getFoo());
 };
+
+class RepeatArray<T> extends Array<T> {
+  repeat(times: number): RepeatArray<T> {
+    const result = new RepeatArray<T>();
+    for (let i = 0; i < times; i++) {
+      result.push(...this);
+    }
+    return result;
+  }
+}
+
+export const useRepeatArr = () => {
+  const arr = new RepeatArray<number>(1, 2);
+  console.log(arr);
+  arr.push(3);
+  console.log(arr);
+  const repeat = arr.repeat(3);
+  console.log(repeat);
+};
