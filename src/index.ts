@@ -1,2 +1,2 @@
-import { apply } from "./05_Class/04_this";
-apply();
+import { bind } from "./05_Class/04_this";
+bind();

@@ -54,3 +54,12 @@ export const apply = () => {
 
   console.log(uhyo.isAdult.apply(jhon, []));
 };
+
+export const bind = () => {
+  const uhyo = new User("uhyo", 21);
+  const jhon = new User("Jhon", 15);
+  const bindIsAdult = uhyo.isAdult.bind(uhyo);
+
+  console.log(`bind=${bindIsAdult()}`);
+  console.log(`bind.call=${bindIsAdult.apply(jhon)}`);
+};
