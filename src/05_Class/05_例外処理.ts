@@ -10,3 +10,20 @@ export const error = () => {
     throw error;
   }
 };
+
+export const tryCatch = () => {
+  try {
+    console.log("エラーを発生させる");
+    throwError();
+    console.log("発生させました");
+  } catch (err) {
+    console.log("キャッチ");
+    console.log(err);
+  }
+  console.log("おわり");
+
+  function throwError() {
+    const error = new Error("エラー発生！");
+    throw error;
+  }
+};
