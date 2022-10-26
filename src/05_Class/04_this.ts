@@ -63,3 +63,16 @@ export const bind = () => {
   console.log(`bind=${bindIsAdult()}`);
   console.log(`bind.call=${bindIsAdult.apply(jhon)}`);
 };
+
+class A {
+  foo = 123;
+  bar = this.foo + 100;
+  getFoo() {
+    return this.foo;
+  }
+}
+
+export const thisWithoutFnc = () => {
+  const obj = new A();
+  console.log(obj.bar, obj.getFoo());
+};
