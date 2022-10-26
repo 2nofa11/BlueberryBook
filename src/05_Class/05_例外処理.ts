@@ -41,3 +41,34 @@ export const globalEscape = () => {
     console.log("関数から脱出するのでここでは実行されない");
   }
 };
+
+export const exceptionFinally = () => {
+  try {
+    console.log("エラーを発生させます。");
+    thorwError();
+    console.log("エラーを発生させました");
+  } finally {
+    console.log("finallyの後ろ");
+  }
+  console.log("tryの後ろ");
+
+  function thorwError() {
+    throw new Error("エラーが発生！");
+  }
+};
+
+export const functionFinally = () => {
+  console.log(sum(100));
+
+  function sum(max: number) {
+    try {
+      let result = 0;
+      for (let i = 0; i <= max; i++) {
+        result += i;
+      }
+      return result;
+    } finally {
+      console.log("sumからの脱出");
+    }
+  }
+};
