@@ -1,2 +1,2 @@
-import { functionFinally } from "./05_Class/05_例外処理";
-functionFinally();
+import { useUser } from "./05_Class/06_力試し";
+useUser();
