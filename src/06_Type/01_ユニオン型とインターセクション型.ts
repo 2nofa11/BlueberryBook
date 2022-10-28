@@ -7,6 +7,8 @@ type Human = {
   age: number;
 };
 
+type MysteryFunc = ((str: string) => string) | ((str: string) => number);
+
 type User = Animal | Human;
 
 const tama: User = {
@@ -27,3 +29,8 @@ export const unionType = () => {
   console.log(tama);
   console.log(uhyo);
 };
+
+export function useFnc(func: MysteryFunc) {
+  const result = func("1000");
+  console.log(result);
+}
