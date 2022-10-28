@@ -1,23 +1,29 @@
 type Animal = {
   species: string;
+  age: string;
 };
 type Human = {
   name: string;
+  age: number;
 };
 
 type User = Animal | Human;
 
 const tama: User = {
   species: "cats",
+  age: "永遠の17歳",
 };
 
 const uhyo: User = {
   name: "uhyo",
+  age: 10,
 };
 
-export const unionType = (user?: User) => {
+const propagationUnion = (user: User) => {
+  const age = user.age;
+};
+
+export const unionType = () => {
   console.log(tama);
   console.log(uhyo);
-  if (!user) return;
-  user.name;
 };
