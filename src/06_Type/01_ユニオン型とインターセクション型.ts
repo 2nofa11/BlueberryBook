@@ -71,3 +71,23 @@ export const exeMystery = () => {
   const uhyo: Human4 & Animal4 = { name: "uhyo", species: 1 };
   console.log(mystery(uhyo));
 };
+
+type Human5 = {
+  name: string;
+  age?: number;
+};
+
+const uhyo5: Human5 = {
+  name: "uhyo",
+  age: 25,
+};
+
+const jhon5: Human5 = {
+  name: "jhon",
+  //   age: undefined, exactOptionalPropertyTypesによりエラー
+};
+
+export const optionalFnc = () => {
+  console.log(uhyo5);
+  console.log(jhon5);
+};
