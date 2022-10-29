@@ -34,3 +34,24 @@ export function useFnc(func: MysteryFunc) {
   const result = func("1000");
   console.log(result);
 }
+
+type IntersectionHuman = Animal & {
+  name: string;
+};
+
+const cat: Animal = {
+  species: "cat",
+  age: "3",
+};
+
+const uhyo2: IntersectionHuman = {
+  species: "human",
+  age: "4",
+  name: "uhyo",
+};
+
+type StringAndNumber = string & number;
+// const cat1: Animal & string = {
+//   species: "a",
+//   age: "a",
+// };
