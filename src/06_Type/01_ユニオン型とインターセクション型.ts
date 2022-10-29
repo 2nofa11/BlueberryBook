@@ -57,7 +57,7 @@ type StringAndNumber = string & number;
 // };
 
 type Human4 = { name: string };
-type Animal4 = { species: string };
+type Animal4 = { species: number };
 
 function getName(human: Human4) {
   return human.name;
@@ -68,6 +68,6 @@ function getSpecies(animal: Animal4) {
 
 const mystery = Math.random() < 0.5 ? getName : getSpecies;
 export const exeMystery = () => {
-  const uhyo: Human4 & Animal4 = { name: "uhyo", species: "cat" };
-  mystery(uhyo);
+  const uhyo: Human4 & Animal4 = { name: "uhyo", species: 1 };
+  console.log(mystery(uhyo));
 };
