@@ -91,3 +91,8 @@ export const optionalFnc = () => {
   console.log(uhyo5);
   console.log(jhon5);
 };
+
+export const useMaybeHuman = (human: Human | null) => {
+  const age = human?.age;
+  console.log(age);
+};
