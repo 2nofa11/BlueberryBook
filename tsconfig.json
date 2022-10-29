@@ -5,6 +5,7 @@
     "strict": true,
     "target": "es2020",
     "module": "commonjs",
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true
   }
 }
