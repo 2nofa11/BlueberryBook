@@ -21,3 +21,18 @@ const uhyoKey: "user:uhyo" = makeKey("uhyo");
 export function signNumber(type: "plus" | "minus") {
   return type === "plus" ? 1 : -1;
 }
+
+let uhyo1: "uhyo" | "jhon" = "uhyo";
+
+type Uhyo2 = {
+  readonly name: string;
+  readonly age: number;
+};
+const uhyo2: Uhyo2 = {
+  name: "uhyo",
+  age: 26,
+};
+
+export const uhyoLiteral = () => {
+  console.log(uhyo2);
+};
