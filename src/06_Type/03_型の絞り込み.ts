@@ -19,3 +19,44 @@ export function formatNUmberOrString(value: string | number) {
     return value;
   }
 }
+
+type Animal = {
+  tag: "animal";
+  species: string;
+};
+
+type Human = {
+  tag: "human";
+  name: string;
+};
+
+type User = Animal | Human;
+
+function getUserName(user: User) {
+  if (user.tag === "human") {
+    return user.name;
+  } else {
+    return "名無し";
+  }
+}
+
+const tama: User = {
+  tag: "animal",
+  species: "cats",
+};
+
+const uhyo: User = {
+  tag: "human",
+  name: "uhyo",
+};
+
+export function useADT() {
+  console.log(getUserName(tama));
+  console.log(getUserName(uhyo));
+}
+
+// タグがないためエラー
+// const alian: User = {
+//   tag: "alian",
+//   species: "human_",
+// };
