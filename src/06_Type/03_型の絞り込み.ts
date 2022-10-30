@@ -30,7 +30,12 @@ type Human = {
   name: string;
 };
 
-type User = Animal | Human;
+type Robot = {
+  tag: "robot";
+  name: string;
+};
+
+type User = Animal | Human | Robot;
 
 function getUserName(user: User) {
   if (user.tag === "human") {
@@ -40,19 +45,30 @@ function getUserName(user: User) {
   }
 }
 
-const tama: User = {
+function getUserNameSwitch(user: User): string {
+  switch (user.tag) {
+    case "human":
+      return user.name;
+    case "animal":
+      return "名無し";
+    case "robot":
+      return `CPU ${user.name}`;
+  }
+}
+
+const tama: Animal = {
   tag: "animal",
   species: "cats",
 };
 
-const uhyo: User = {
+const uhyo: Human = {
   tag: "human",
   name: "uhyo",
 };
 
 export function useADT() {
-  console.log(getUserName(tama));
-  console.log(getUserName(uhyo));
+  console.log(getUserNameSwitch(tama));
+  console.log(getUserNameSwitch(uhyo));
 }
 
 // タグがないためエラー
