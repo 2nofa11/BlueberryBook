@@ -1,7 +1,7 @@
 type Human = {
   type: "human";
   name: string;
-  age: number;
+  age: bigint;
 };
 
 export function setAge(human: Human, age: Human["age"]) {
@@ -14,5 +14,5 @@ export function setAge(human: Human, age: Human["age"]) {
 export const uhyo: Human = {
   type: "human",
   name: "uhyo",
-  age: 26,
+  age: 26n,
 };
