@@ -1,2 +1,2 @@
-import { uhyoLiteral } from "./06_Type/02_リテラル型";
-uhyoLiteral();
+import { numberWithSign } from "./06_Type/03_型の絞り込み";
+console.log(numberWithSign(5, "none"));
