@@ -11,3 +11,11 @@ export function numberWithSign(num: number, type: SignType | "none") {
     return num * signNumber(type);
   }
 }
+
+export function formatNUmberOrString(value: string | number) {
+  if (typeof value === "number") {
+    return value.toFixed(3);
+  } else {
+    return value;
+  }
+}
