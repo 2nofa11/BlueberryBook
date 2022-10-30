@@ -17,3 +17,7 @@ function makeKey<T extends string>(userName: T) {
 }
 
 const uhyoKey: "user:uhyo" = makeKey("uhyo");
+
+export function signNumber(type: "plus" | "minus") {
+  return type === "plus" ? 1 : -1;
+}
