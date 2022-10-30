@@ -36,3 +36,8 @@ const uhyo2: Uhyo2 = {
 export const uhyoLiteral = () => {
   console.log(uhyo2);
 };
+
+const uhyo5_1 = "uhyo";
+const uhyo5_2: "uhyo" = "uhyo";
+let uhyo5_3 = uhyo5_1;
+let uhyo5_4 = uhyo5_2;
