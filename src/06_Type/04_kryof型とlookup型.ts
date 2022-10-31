@@ -16,3 +16,6 @@ export const uhyo: Human = {
   name: "uhyo",
   age: 26n,
 };
+
+// 型から別の型を作ることができる
+type HumanKeys = keyof Human;
