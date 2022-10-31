@@ -1,2 +1,3 @@
-import { convertUnit } from "./06_Type/04_kryof型とlookup型";
-console.log(convertUnit(5000, "mm"));
+import { getFirstFiveLetters } from "./06_Type/05_asによる型アサーション";
+console.log(getFirstFiveLetters("uhyouhyo"));
+// console.log(getFirstFiveLetters(123));
