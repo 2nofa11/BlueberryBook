@@ -1,3 +1,4 @@
+import { generics } from "../04_Function/04_ジェネリクス";
 import { functionFinally } from "../05_Class/05_例外処理";
 
 type Human = {
@@ -41,3 +42,22 @@ export function convertUnit(
     km: mmValue / 1e6,
   };
 }
+
+function get<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+type Human3 = {
+  name: string;
+  age: number;
+};
+
+const uhyo3: Human3 = {
+  name: "uhyo",
+  age: 26,
+};
+
+export const genericsFnc = () => {
+  const uhyoName = get(uhyo3, "name");
+  console.log(uhyoName);
+};
