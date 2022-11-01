@@ -11,6 +11,7 @@ type Animal = {
 type Human = {
   tag: "human";
   name: string;
+  age?: number;
 };
 
 type User = Animal | Human;
@@ -31,3 +32,13 @@ export const exeNames = () => {
   ];
   return getNameIfAllHuman(humans);
 };
+
+function getOneUserName(user1?: Human, user2?: Human): string | undefined {
+  if (user1 === undefined && user2 === undefined) {
+    return undefined;
+  }
+  if (user1 !== undefined) {
+    return user1.name;
+  }
+  return user2!.name;
+}
