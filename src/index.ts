@@ -1,2 +1,2 @@
-import { exeNames } from "./06_Type/05_asによる型アサーション";
-console.log(exeNames());
+import { doNothing } from "./06_Type/06_any型をunknown型";
+console.log(doNothing("100"));
