@@ -42,3 +42,13 @@ function getOneUserName(user1?: Human, user2?: Human): string | undefined {
   }
   return user2!.name;
 }
+
+// names = ["uhyo","jhon"]
+const names = ["uhyo", "jhon"] as const;
+// readonly ["uhyo","jhon"]
+type namesType = typeof names;
+// type Name =
+type name = namesType[number];
+
+// これだと何が入っているかわからない（型を明示的に出す必要あり⇒その中のどれでもLookup関数）
+const hoge = names[1];
