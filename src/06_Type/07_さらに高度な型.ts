@@ -43,3 +43,11 @@ export function assertHuman(value: any): asserts value is Human {
     throw new Error("not Human");
   }
 }
+
+type NumberAndString = [number, ...string[], number];
+
+const arr1: NumberAndString = [1, "a", "b", 9];
+const arr2: NumberAndString = [1, 9];
+
+type NSN = [number, string, number];
+type SNSNS = [string, ...NSN, string];
