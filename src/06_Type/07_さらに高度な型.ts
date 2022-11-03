@@ -11,3 +11,7 @@ function useNever(value: never) {
   const str: string = value;
   const obj: object = value;
 }
+
+export function isStringOrNumber(value: unknown): value is string | number {
+  return typeof value === "string" || typeof value === "number";
+}
