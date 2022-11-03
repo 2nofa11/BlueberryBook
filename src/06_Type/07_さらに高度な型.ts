@@ -30,3 +30,16 @@ export function isHuman(value: any): value is Human {
     typeof value.age === "number"
   );
 }
+
+export function assertHuman(value: any): asserts value is Human {
+  if (value === null) {
+    throw new Error("Given value is null or undef");
+  }
+  if (
+    value.type !== "Human" ||
+    typeof value.name !== "string" ||
+    typeof value.age !== "number"
+  ) {
+    throw new Error("not Human");
+  }
+}
