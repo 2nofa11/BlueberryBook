@@ -15,3 +15,18 @@ function useNever(value: never) {
 export function isStringOrNumber(value: unknown): value is string | number {
   return typeof value === "string" || typeof value === "number";
 }
+
+type Human = {
+  type: "Human";
+  name: string;
+  age: number;
+};
+
+export function isHuman(value: any): value is Human {
+  if (value == null) return false;
+  return (
+    value.type === "Human" &&
+    typeof value.name === "string" &&
+    typeof value.age === "number"
+  );
+}

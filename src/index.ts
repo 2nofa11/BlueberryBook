@@ -1,10 +1,7 @@
-import { useToString } from "./06_Type/07_さらに高度な型";
-console.log(
-  useToString({
-    toString() {
-      return "aa";
-    },
-  })
-);
-// objectと定義することで入ってくる型を制限する
-// console.log(useToString(3.14));
+import { isHuman } from "./06_Type/07_さらに高度な型";
+
+const something: unknown = { type: "Human", name: "uhyo", age: 26 };
+
+if (isHuman(something)) {
+  console.log(something.type);
+}
