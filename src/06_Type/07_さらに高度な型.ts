@@ -22,8 +22,14 @@ type Human = {
   age: number;
 };
 
-export function isHuman(value: any): value is Human {
-  if (value == null) return false;
+function isPropertyAccessible(
+  value: unknown
+): value is { [key: string]: unknown } {
+  return value != null;
+}
+
+export function isHuman(value: unknown): value is Human {
+  if (!isPropertyAccessible(value)) return false;
   return (
     value.type === "Human" &&
     typeof value.name === "string" &&
