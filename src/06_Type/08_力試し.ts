@@ -23,3 +23,21 @@ export function answer2(obj: Option<number>) {
 function isSome<T>(obj: Option<T>): obj is Some<T> {
   return obj.tag === "some";
 }
+
+export function doubleOption(obj: Option<number>) {
+  console.log(mapOption(obj, (x) => x * 2));
+}
+
+function mapOption<T, U>(obj: Option<T>, callback: (value: T) => U): Option<U> {
+  switch (obj.tag) {
+    case "some":
+      return {
+        tag: "some",
+        value: callback(obj.value),
+      };
+    case "none":
+      return {
+        tag: "none",
+      };
+  }
+}
