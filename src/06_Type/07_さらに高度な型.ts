@@ -93,3 +93,23 @@ export function func<M extends "string" | "number">(
 ) {
   console.log(mode, args);
 }
+
+type RO = Readonly<{
+  name: string;
+  age: number;
+}>;
+type PARTICAL = Partial<{
+  name: string;
+  age: number;
+}>;
+
+type PICK = Pick<
+  {
+    name: string;
+    age: number;
+  },
+  "age"
+>;
+
+type Union = "uhyo" | "hoge" | 1 | 2 | 3;
+type EXTRACT = Extract<Union, string>;
