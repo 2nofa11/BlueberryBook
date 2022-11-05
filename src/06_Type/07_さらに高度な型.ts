@@ -82,3 +82,14 @@ export const numberArr: FruitArrays = {
   orange: ["orange", "orange", "orange"],
   strawberry: ["strawberry"],
 };
+
+type RestArg<M> = M extends "string"
+  ? [string, string]
+  : [number, number, number];
+
+export function func<M extends "string" | "number">(
+  mode: M,
+  ...args: RestArg<M>
+) {
+  console.log(mode, args);
+}
