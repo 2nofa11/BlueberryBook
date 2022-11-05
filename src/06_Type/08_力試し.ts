@@ -1,4 +1,11 @@
-export type Option<T> = { tag: "some"; value: T } | { tag: "none" };
+export type Option<T> = Some<T> | None;
+type Some<T> = {
+  tag: "some";
+  value: T;
+};
+type None = {
+  tag: "none";
+};
 
 export function answer1() {
   const a: Option<number> = { tag: "some", value: 100 };
@@ -13,6 +20,6 @@ export function answer2(obj: Option<number>) {
   }
 }
 
-function isSome<T>(obj: Option<T>): obj is { tag: "some"; value: T } {
+function isSome<T>(obj: Option<T>): obj is Some<T> {
   return obj.tag === "some";
 }
