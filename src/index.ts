@@ -1,7 +1,3 @@
-import { isStringOrNumber } from "./06_Type/07_さらに高度な型";
+import { answer1 } from "./06_Type/08_力試し";
 
-const tmp: unknown = true;
-
-if (isStringOrNumber(tmp)) {
-  console.log(tmp.toString());
-}
+answer1();
