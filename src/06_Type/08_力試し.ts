@@ -8,7 +8,11 @@ export function answer1() {
 }
 
 export function answer2(obj: Option<number>) {
-  if (obj.tag === "some") {
+  if (isSome(obj)) {
     console.log(obj.value);
   }
+}
+
+function isSome<T>(obj: Option<T>): obj is { tag: "some"; value: T } {
+  return obj.tag === "some";
 }
