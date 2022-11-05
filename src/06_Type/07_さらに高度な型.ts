@@ -51,3 +51,34 @@ const arr2: NumberAndString = [1, 9];
 
 type NSN = [number, string, number];
 type SNSNS = [string, ...NSN, string];
+
+// mapped types {[P in K]:T}
+type Fruit = "apple" | "orange" | "strawberry";
+
+// FruitNumbers
+// apple: number;
+// orange: number;
+// strawberry: number;
+type FruitNumbers = {
+  [P in Fruit]: number;
+};
+
+export const numbers: FruitNumbers = {
+  apple: 1,
+  orange: 2,
+  strawberry: 9,
+};
+
+// FruitArrays
+// apple: "apple"[];
+// orange: "orange"[];
+// strawberry: "strawberry"[];
+type FruitArrays = {
+  [P in Fruit]: P[];
+};
+
+export const numberArr: FruitArrays = {
+  apple: ["apple", "apple"],
+  orange: ["orange", "orange", "orange"],
+  strawberry: ["strawberry"],
+};
