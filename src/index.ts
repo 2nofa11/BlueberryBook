@@ -1,4 +1,3 @@
-export const cat: Animal = {
-  age: 1,
-  species: "",
-};
+import { rl } from "./07_モジュールシステム/02_Nodejsのモジュールシステム";
+
+rl.question();
