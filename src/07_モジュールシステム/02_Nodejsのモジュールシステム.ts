@@ -10,9 +10,19 @@ rl.question("文字列を入力してください", (line) => {
   rl.close();
 });
 
-import fastify from "fastify";
+// import fastify from "fastify";
 
-export const app = fastify();
+// export const app = fastify();
+
+// app.get("/", (req, reply) => {
+//   reply.send("hi,W");
+// });
+
+// app.listen(8080);
+
+import express from "express";
+
+export const app = express();
 
 app.get("/", (req, reply) => {
   reply.send("hi,W");
