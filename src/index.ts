@@ -1,2 +1,6 @@
-import { calcUhyo } from "./07_モジュールシステム/03_力試し";
-console.log(calcUhyo());
+import {
+  callBackExample,
+  callBackMapExample,
+} from "./08_非同期処理/01_コールバックによる非同期処理の扱い";
+callBackExample();
+callBackMapExample();
