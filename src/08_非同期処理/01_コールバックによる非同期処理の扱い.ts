@@ -1,4 +1,5 @@
 import { readFile } from "fs";
+import { Performance } from "perf_hooks";
 
 export const callBackExample = () => {
   console.log("1RF");
@@ -23,4 +24,15 @@ export const timerAsync = () => {
     console.log("タイマーが呼び出された");
   }, 3000);
   console.log("タイマーが呼ばれたよ");
+};
+
+export const readFileAsync = () => {
+  const startTime = performance.now();
+  // 三つの引数
+  readFile("uhyo.txt", "utf8", (err, result) => {
+    const endTime = performance.now();
+    console.log(endTime - startTime);
+    console.log(result);
+  });
+  console.log("よみ込み開始");
 };
