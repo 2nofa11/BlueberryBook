@@ -17,3 +17,10 @@ export const callBackMapExample = () => {
   });
   console.log("3Map");
 };
+
+export const timerAsync = () => {
+  setTimeout(() => {
+    console.log("タイマーが呼び出された");
+  }, 3000);
+  console.log("タイマーが呼ばれたよ");
+};
