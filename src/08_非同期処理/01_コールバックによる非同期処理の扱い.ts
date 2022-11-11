@@ -1,5 +1,5 @@
 import { readFile } from "fs";
-import { Performance } from "perf_hooks";
+import { performance } from "perf_hooks";
 
 export const callBackExample = () => {
   console.log("1RF");
@@ -35,4 +35,16 @@ export const readFileAsync = () => {
     console.log(result);
   });
   console.log("よみ込み開始");
+};
+
+export const arrAsyncAndSync = () => {
+  setTimeout(() => {
+    console.log("タイマーが呼び出された");
+  }, 100);
+  const startTime = performance.now();
+  let count = 0;
+  while (performance.now() - startTime < 1000) {
+    count++;
+  }
+  console.log(count);
 };
