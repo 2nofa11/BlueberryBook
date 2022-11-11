@@ -1,2 +1,2 @@
-import { successOrError } from "./08_非同期処理/03_Promiseを使う";
-successOrError();
+import { promiseFinally } from "./08_非同期処理/03_Promiseを使う";
+promiseFinally();
