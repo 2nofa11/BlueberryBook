@@ -1,2 +1,2 @@
-import { arrAsyncAndSync } from "./08_非同期処理/01_コールバックによる非同期処理の扱い";
-arrAsyncAndSync();
+import { callBackExample } from "./08_非同期処理/01_コールバックによる非同期処理の扱い";
+callBackExample();
