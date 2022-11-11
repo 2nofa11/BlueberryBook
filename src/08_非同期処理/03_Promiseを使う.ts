@@ -24,3 +24,18 @@ export const successOrError = () => {
     }
   );
 };
+
+export const promiseFinally = () => {
+  const p = readFile("uhyo.txt", "utf8");
+  p.then(
+    (result) => {
+      console.log("成功", result);
+    },
+    (e) => {
+      console.log("失敗", e);
+    }
+  );
+  p.finally(() => {
+    console.log("終了");
+  });
+};
