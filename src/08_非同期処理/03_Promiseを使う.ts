@@ -25,6 +25,10 @@ export const successOrError = () => {
       console.log("失敗", error);
     }
   );
+  setTimeout(() => {
+    console.log("hoge");
+  }, 3000);
+  console.log("これがさいしん？");
 };
 
 export const promiseFinally = () => {
@@ -64,4 +68,13 @@ export const howToMakePromise = () => {
       console.log("reject起因によりエラー");
     }
   );
+};
+
+export const staticPromise = () => {
+  const p = Promise.resolve(100);
+
+  p.then((resolve) => {
+    console.log(resolve);
+  });
+  console.log("1");
 };
