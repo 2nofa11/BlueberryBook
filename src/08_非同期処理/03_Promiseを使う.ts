@@ -42,15 +42,20 @@ export const promiseFinally = () => {
 };
 
 export const howToMakePromise = () => {
+  const sleep = (duration: number) => {
+    return new Promise<void>((resolve) => {
+      setTimeout(() => resolve, duration);
+    });
+  };
   // 型引数：number 引数：(resolve) => {}
-  const p = new Promise<number>((resolve) => {
-    console.log(String(resolve));
-    setTimeout(() => {
-      resolve(100);
-    }, 300);
-  });
+  // const p = new Promise<number>((resolve) => {
+  //   console.log(String(resolve));
+  //   setTimeout(() => {
+  //     resolve(100);
+  //   }, 300);
+  // });
 
-  p.then((num) => {
-    console.log(`結果は${num}`);
+  sleep(2000).then((num) => {
+    console.log(`結果は${num}ミリ秒たちました`);
   });
 };
