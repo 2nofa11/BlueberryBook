@@ -44,6 +44,7 @@ export const promiseFinally = () => {
 export const howToMakePromise = () => {
   // 型引数：number 引数：(resolve) => {}
   const p = new Promise<number>((resolve) => {
+    console.log(String(resolve));
     setTimeout(() => {
       resolve(100);
     }, 300);
