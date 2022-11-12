@@ -1,4 +1,5 @@
 import { readFile } from "fs/promises";
+import { resolve } from "path";
 export const promiseTest = () => {
   const p = readFile("uhyo.txt", "utf8");
   p.then((data) => {
@@ -37,5 +38,18 @@ export const promiseFinally = () => {
   );
   p.finally(() => {
     console.log("終了");
+  });
+};
+
+export const howToMakePromise = () => {
+  // 型引数：number 引数：(resolve) => {}
+  const p = new Promise<number>((resolve) => {
+    setTimeout(() => {
+      resolve(100);
+    }, 300);
+  });
+
+  p.then((num) => {
+    console.log(`結果は${num}`);
   });
 };
