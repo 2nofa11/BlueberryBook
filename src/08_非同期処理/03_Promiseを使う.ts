@@ -1,3 +1,4 @@
+import { rejects } from "assert";
 import { readFile } from "fs/promises";
 import { resolve } from "path";
 export const promiseTest = () => {
@@ -43,8 +44,8 @@ export const promiseFinally = () => {
 
 export const howToMakePromise = () => {
   const sleep = (duration: number) => {
-    return new Promise<void>((resolve) => {
-      setTimeout(() => resolve, duration);
+    return new Promise<void>((resolve, reject) => {
+      setTimeout(reject, duration);
     });
   };
   // 型引数：number 引数：(resolve) => {}
@@ -55,7 +56,12 @@ export const howToMakePromise = () => {
   //   }, 300);
   // });
 
-  sleep(2000).then((num) => {
-    console.log(`結果は${num}ミリ秒たちました`);
-  });
+  sleep(2000).then(
+    (num) => {
+      console.log(`結果は${num}ミリ秒たちました`);
+    },
+    (error) => {
+      console.log("reject起因によりエラー");
+    }
+  );
 };
