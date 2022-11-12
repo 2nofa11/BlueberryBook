@@ -80,17 +80,18 @@ export const staticPromise = () => {
 };
 
 export const promiseAll = () => {
-  const pFoo = readFile("foo.txt", "utf8");
-  const pBar = readFile("foo.txt", "utf8");
-  const pBaz = readFile("baz.txt", "utf8");
-
-  const p = Promise.all([pFoo, pBar, pBaz]);
+  const p = Promise.all([
+    readFile("foo.txt", "utf8"),
+    readFile("foo.txt", "utf8"),
+    readFile("baz.txt", "utf8"),
+  ]);
 
   p.then(
     (result) => {
-      console.log("foo.txt", result[0]);
-      console.log("bar.txt", result[1]);
-      console.log("baz.txt", result[2]);
+      const [foo, bar, baz] = result;
+      console.log("foo.txt", foo);
+      console.log("bar.txt", bar);
+      console.log("baz.txt", baz);
     },
     (err) => {
       console.log("失敗");
