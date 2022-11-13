@@ -1,4 +1,5 @@
 import { rejects } from "assert";
+import console from "console";
 import { readFile } from "fs/promises";
 import { resolve } from "path";
 export const promiseTest = () => {
@@ -229,4 +230,14 @@ export const successOrError_8_3_10 = () => {
   const p3 = p2.catch((e) => {
     console.log("失敗", e);
   });
+};
+export const dynamicImport = () => {
+  import("fs/promises")
+    .then(({ readFile }) => readFile("foo.txt", "utf-8"))
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((e) => {
+      console.log("エラー発生");
+    });
 };
