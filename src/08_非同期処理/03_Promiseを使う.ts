@@ -98,3 +98,21 @@ export const promiseAll = () => {
     }
   );
 };
+
+export const racePromise = () => {
+  const sleepReject = (duration: number) => {
+    return new Promise<never>((resolve, reject) => {
+      setTimeout(reject, duration);
+    });
+  };
+  const p = Promise.race([readFile("foo.txt", "utf-8"), sleepReject(0)]);
+
+  p.then(
+    (result) => {
+      console.log("成功", result);
+    },
+    (e) => {
+      console.log("失敗", e);
+    }
+  );
+};
