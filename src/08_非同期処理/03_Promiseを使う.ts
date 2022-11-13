@@ -226,3 +226,13 @@ export const promiseChain3_1 = () => {
       }
     );
 };
+
+export const successOrError_8_3_10 = () => {
+  const p = readFile("error.txt", "utf8");
+  const p2 = p.then((result) => {
+    console.log("成功", result);
+  });
+  const p3 = p2.catch((e) => {
+    console.log("失敗", e);
+  });
+};
