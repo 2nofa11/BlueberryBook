@@ -161,7 +161,7 @@ export const promiseChain = () => {
   });
 };
 
-export const promiseChain2 = () => {
+export const promiseChain1 = () => {
   //　readFileを呼び出し
   readFile("foo.txt", "utf8")
     .finally(() => {
@@ -171,4 +171,30 @@ export const promiseChain2 = () => {
     .catch(() => "")
     //その結果をログで表示
     .then((result) => console.log(result));
+};
+
+const repeat10 = (str: string) =>
+  new Promise<string>((resolve) => {
+    setTimeout(() => resolve(str.repeat(10)), 1000);
+  });
+
+export const promiseChain2 = () => {
+  const p1 = readFile("foo.txt", "utf-8");
+  const p3 = p1.then((result) => {
+    console.log(result);
+    const p2 = repeat10(result);
+    console.log(p2);
+    return p2;
+  });
+  p3.then((result) => {
+    console.log(result);
+  });
+};
+
+export const promiseChain2_1 = () => {
+  readFile("foo.txt", "utf-8")
+    .then((result) => repeat10(result))
+    .then((result) => {
+      console.log(result);
+    });
 };
