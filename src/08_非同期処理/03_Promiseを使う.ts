@@ -16,19 +16,13 @@ export const promiseTest = () => {
 };
 
 export const successOrError = () => {
-  const p = readFile("foo.txt", "utf8");
-  p.then(
-    (result) => {
-      console.log("成功", result);
-    },
-    (error: unknown) => {
-      console.log("失敗", error);
-    }
-  );
-  setTimeout(() => {
-    console.log("hoge");
-  }, 3000);
-  console.log("これがさいしん？");
+  const p = readFile("faoo.txt", "utf8");
+  p.then((result) => {
+    console.log("成功", result);
+  });
+  p.catch((error: unknown) => {
+    console.log("失敗", error);
+  });
 };
 
 export const promiseFinally = () => {
