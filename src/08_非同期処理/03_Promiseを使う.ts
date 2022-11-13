@@ -147,3 +147,16 @@ export const anyProcess = () => {
     console.log(result);
   });
 };
+
+export const promiseChain = () => {
+  const p = readFile("foo1.txt", "utf8");
+
+  const p2 = p.then(
+    (result) => result + result,
+    (error) => ""
+  );
+
+  p2.then((result) => {
+    console.log(result);
+  });
+};
