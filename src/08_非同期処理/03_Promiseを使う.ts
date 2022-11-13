@@ -198,3 +198,31 @@ export const promiseChain2_1 = () => {
       console.log(result);
     });
 };
+
+export const promiseChain3 = () => {
+  const p1 = readFile("foo.txt", "utf-8");
+  const p2 = p1.then((result) => {
+    throw new Error("E");
+  });
+  p2.then((result) => {
+    console.log(result);
+  });
+};
+
+export const promiseChain3_1 = () => {
+  const sleepReject = (duration: number) => {
+    return new Promise<never>((resolve, reject) => {
+      setTimeout(reject, duration);
+    });
+  };
+  const p = readFile("foo.txt", "utf-8")
+    .then(() => sleepReject(1000))
+    .then(
+      (result) => {
+        console.log("OK");
+      },
+      () => {
+        console.log("E");
+      }
+    );
+};
