@@ -160,3 +160,15 @@ export const promiseChain = () => {
     console.log(result);
   });
 };
+
+export const promiseChain2 = () => {
+  //　readFileを呼び出し
+  readFile("foo.txt", "utf8")
+    .finally(() => {
+      console.log("finallyCall?");
+    })
+    //失敗の場合は空文字を返して成功とする
+    .catch(() => "")
+    //その結果をログで表示
+    .then((result) => console.log(result));
+};
