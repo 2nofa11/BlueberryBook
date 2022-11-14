@@ -1,2 +1,2 @@
-import { dynamicImport } from "./08_非同期処理/03_Promiseを使う";
-dynamicImport();
+import { asyncFunc } from "./08_非同期処理/04_async・await構文";
+asyncFunc();
