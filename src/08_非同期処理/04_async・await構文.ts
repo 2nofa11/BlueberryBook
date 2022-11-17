@@ -69,3 +69,15 @@ export async function awaitFunc3() {
   await writeFile("bar.txt", fooContent + fooContent);
   console.log("書き込みが完了しました");
 }
+
+export async function awaitFunc4() {
+  const { readFile, writeFile } = await import("fs/promises");
+
+  try {
+    const fooContent = await readFile("foo.tx", "utf8");
+    await writeFile("bar.txt", fooContent + fooContent);
+    console.log("書き込み完了");
+  } catch {
+    console.log("失敗");
+  }
+}
