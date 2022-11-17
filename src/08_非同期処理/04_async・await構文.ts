@@ -60,3 +60,12 @@ export const awaitFunc2 = () => {
     console.log(result);
   });
 };
+
+export async function awaitFunc3() {
+  const { readFile, writeFile } = await import("fs/promises");
+
+  const fooContent = await readFile("foo.txt", "utf8");
+  // awaitをつけることで読み書き処理に待ちを作っている
+  await writeFile("bar.txt", fooContent + fooContent);
+  console.log("書き込みが完了しました");
+}
