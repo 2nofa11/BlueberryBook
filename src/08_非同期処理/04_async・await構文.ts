@@ -1,3 +1,4 @@
+import { readFile, writeFile } from "fs/promises";
 import { resolve } from "path";
 
 async function get3(): Promise<number> {
@@ -71,8 +72,6 @@ export async function awaitFunc3() {
 }
 
 export async function awaitFunc4() {
-  const { readFile, writeFile } = await import("fs/promises");
-
   try {
     const fooContent = await readFile("foo.tx", "utf8");
     await writeFile("bar.txt", fooContent + fooContent);
@@ -81,3 +80,9 @@ export async function awaitFunc4() {
     console.log("失敗");
   }
 }
+
+export const allowAsync = async () => {
+  const fooContent = await readFile("foo.txt", "utf8");
+  await writeFile("bar.txt", fooContent + fooContent);
+  console.log("書き込み完了");
+};
