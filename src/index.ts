@@ -1,4 +1,6 @@
-import { allowAsync } from "./08_非同期処理/04_async・await構文";
-allowAsync().then(() => {
-  console.log("allowAsyncが完了しました。");
+import console from "console";
+import { calcUhyo } from "./08_非同期処理/05_力試し";
+// console.log();
+calcUhyo().then((result) => {
+  console.log(result);
 });
